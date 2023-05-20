@@ -11,7 +11,8 @@
     "yarn": "1.22.19"
   },
   "scripts": {
-    "conditioner": "npx posix-cat ./src/conditioner/data.txt | node ./src/conditioner/index.js"
+    "conditioner": "npx posix-cat ./src/conditioner/data.txt | node ./src/conditioner/index.js",
+    "triangle": "npx posix-cat ./src/triangle/data.txt | node ./src/triangle/index.js"
   },
   "dependencies": {
     "@types/node": "^20.2.1"
