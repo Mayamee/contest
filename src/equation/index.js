@@ -34,9 +34,12 @@ function solveEquation(a, b, c) {
   if (!Number.isInteger(a) || !Number.isInteger(b) || !Number.isInteger(c))
     return null;
   if (c < 0) return "NO SOLUTION";
-  if (a === 0) {
-    if (c ** 2 === b) return "MANY SOLUTIONS";
-    return "NO SOLUTION";
+  if (a + b === c ** 2 && 2 * a + b === c ** 2) {
+    return "MANY SOLUTIONS";
   }
-  return Math.trunc((c ** 2 - b) / a);
+  if (a === 0) return "NO SOLUTION";
+  const ans = (c ** 2 - b) / a;
+  const trunced = Math.trunc(ans);
+  if (ans !== trunced) return "NO SOLUTION";
+  return ans;
 }
