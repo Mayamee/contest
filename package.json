@@ -1,0 +1,19 @@
+{
+  "name": "yandex_contest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "repository": "https://github.com/Mayamee/contest",
+  "author": "Mayamee <ponyashcat228@gmail.com>",
+  "license": "MIT",
+  "volta": {
+    "node": "18.16.0",
+    "yarn": "1.22.19"
+  },
+  "scripts": {
+    "conditioner": "npx posix-cat ./src/conditioner/data.txt | node ./src/conditioner/index.js"
+  },
+  "dependencies": {
+    "@types/node": "^20.2.1"
+  }
+}
