@@ -24,6 +24,6 @@ function solveAmbulance(K1, M, K2, P2, N2) {
   //* Кол-во квартир до K1 в подъезде P1
   const G1 = K1 % avgp;
   //* Этаж N1
-  const N1 = Math.floor((K1 - G1) / avge);
+  const N1 = Math.floor(G1 / avge);
   return [P1, N1];
 }
