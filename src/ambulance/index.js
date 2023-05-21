@@ -6,7 +6,11 @@ const rl = readline.createInterface({
 // start reading
 let K1, M, K2, P2, N2;
 rl.on("line", (line) => {
-  [K1, M, K2, P2, N2] = line.trim();
+  const l = line
+    .trim()
+    .split(" ")
+    .map((e) => +e);
+  [K1, M, K2, P2, N2] = l;
 });
 rl.on("close", () => {
   console.log(solveAmbulance(K1, M, K2, P2, N2).join(' '));
