@@ -13,21 +13,22 @@ rl.on("line", (line) => {
   [K1, M, K2, P2, N2] = l;
 });
 rl.on("close", () => {
-  console.log(solveAmbulance(K1, M, K2, P2, N2).join(' '));
+  console.log(solveAmbulance(K1, M, K2, P2, N2).join(" "));
 });
 
 function solveAmbulance(K1, M, K2, P2, N2) {
   //* Находим среднее кол-во квартир на этаже
   //* номер квартиры / этаж = среднее количество квартир на этаж
   //* номер квартиры с учетом подъезда это как раз все этажи по отношению к номеру квартиры
-  const avge = Math.floor(K2 / (N2 + M * (P2 - 1)));
+  const avge = Math.ceil(K2 / (N2 + M * (P2 - 1)));
   //* Средняя по подъезду
   const avgp = avge * M;
   //* Подъезд новой квартиры
-  const P1 = Math.floor(K1 / avgp);
+  const P1 = Math.ceil(K1 / avgp);
   //* Кол-во квартир до K1 в подъезде P1
   const G1 = K1 % avgp;
   //* Этаж N1
-  const N1 = Math.floor(G1 / avge);
+  const N1 = Math.ceil(G1 / avge);
+
   return [P1, N1];
 }
