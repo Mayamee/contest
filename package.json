@@ -14,7 +14,8 @@
     "conditioner": "npx posix-cat ./src/conditioner/data.txt | node ./src/conditioner/index.js",
     "triangle": "npx posix-cat ./src/triangle/data.txt | node ./src/triangle/index.js",
     "phoneNumbers": "npx posix-cat ./src/phoneNumbers/data.txt | node ./src/phoneNumbers/index.js",
-    "equation": "npx posix-cat ./src/equation/data.txt | node ./src/equation/index.js"
+    "equation": "npx posix-cat ./src/equation/data.txt | node ./src/equation/index.js",
+    "ambulance": "npx posix-cat ./src/ambulance/data.txt | node ./src/ambulance/index.js"
   },
   "dependencies": {
     "@types/node": "^20.2.1"
