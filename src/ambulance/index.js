@@ -9,7 +9,7 @@ rl.on("line", (line) => {
   [K1, M, K2, P2, N2] = line.trim();
 });
 rl.on("close", () => {
-  console.log(solveAmbulance(K1, M, K2, P2, N2));
+  console.log(solveAmbulance(K1, M, K2, P2, N2).join(' '));
 });
 
 function solveAmbulance(K1, M, K2, P2, N2) {
